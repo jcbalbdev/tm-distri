@@ -1,0 +1,89 @@
+---
+---
+<div class="w-full max-w-5xl mx-auto py-8">
+
+  <!--min-w-[400px]  -->
+  <div class="relative group">
+    <div class="overflow-hidden">
+      <div 
+        class="flex w-full transition-transform duration-500 ease-in-out"
+        id="slidermarcas"
+      >
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+          <div class="w-1/5 flex-shrink-0 p-2 group/item">
+            <div class="relative overflow-hidden rounded-xl  aspect-auto w-full transition-transform duration-300 hover:scale-105">
+              <img 
+                src={`/marca${num}.png`}
+                alt={`marca ${num}`}
+                class="object-cover w-full h-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Botones laterales fijos -->
+    <div class="absolute inset-y-0 w-full flex items-center justify-between px-2 pointer-events-none">
+      <button
+        id="prevmarcas"
+        class="pointer-events-auto bg-pink-500/50 text-blue-900 p-0 rounded-full shadow-xl transition-transform transform -translate-x-4"
+        aria-label="Anterior"
+      >
+        <!-- Reemplazar con tu imagen de flecha -->
+        <img src="/flecha_izquierda.png" alt="Anterior" class="w-10 h-10" />
+      </button>
+      <button
+        id="nextmarcas"
+        class="pointer-events-auto bg-pink-500/50 text-blue-900 p-0 rounded-full shadow-xl transition-transform transform translate-x-4"
+        aria-label="Siguiente"
+      >
+        <!-- Reemplazar con tu imagen de flecha -->
+        <img src="/flecha_derecha.png" alt="Siguiente" class="w-10 h-10" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.getElementById('slidermarcas');
+  const slides = document.querySelectorAll('#slidermarcas > div');
+  let currentIndex = 0;
+  let autoPlayInterval;
+
+  const updateSlider = () => {
+    const translateValue = `translateX(-${currentIndex * 20}%)`;
+    slider.style.transform = translateValue;
+  };
+
+  const nextSlide = () => {
+    const maxIndex = Math.floor((slides.length - 1) / 2);
+    currentIndex = (currentIndex + 1) % (maxIndex + 1);
+    updateSlider();
+  };
+
+  const prevSlide = () => {
+    const maxIndex = Math.floor((slides.length - 1) / 2);
+    currentIndex = (currentIndex - 1 + (maxIndex + 1)) % (maxIndex + 1);
+    updateSlider();
+  };
+
+  // Autoplay cada 5 segundos
+  const startAutoPlay = () => {
+    autoPlayInterval = setInterval(nextSlide, 5000);
+  };
+
+  // Control de hover
+  slider.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+  slider.parentElement.addEventListener('mouseleave', startAutoPlay);
+
+  // Event listeners para botones
+  document.getElementById('nextmarcas').addEventListener('click', nextSlide);
+  document.getElementById('prevmarcas').addEventListener('click', prevSlide);
+
+  // Iniciar autoplay
+  startAutoPlay();
+});
+</script>

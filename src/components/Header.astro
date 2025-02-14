@@ -1,6 +1,6 @@
 <header class="bg-teal-500 text-white">
   <!-- Top Bar -->
-  <div class="bg-yellow-400 text-blue-600 text-center text-lg font-bold py-2">
+  <div class="bg-yellow-400 text-white text-center text-lg font-bold py-2">
     <p>Envíos gratuitos para pedidos de S/150.00 o más.</p>
   </div>
 
@@ -8,7 +8,11 @@
   <div class="flex justify-between items-center px-4 py-3 md:px-8">
     <!-- Logo -->
     <div class="flex items-center">
-      <img src="/logo_tn.png" alt="logo" class="w-20">
+      <a href="/">
+
+        <img src="/logo_tn.png" alt="logo" class="w-20">
+      </a>
+      
     </div>
 
     <!-- Hamburger Menu for Small Screens -->
@@ -20,19 +24,22 @@
 
     <!-- Buttons -->
     <div class="hidden md:flex items-center space-x-4">
-      <button class="bg-yellow-400 text-blue-600 font-bold px-4 py-2 rounded-full">
-        DESCARGAR CATÁLOGO
-      </button>
+      <a href="/catalogo.pdf" 
+       download="Catalogo-Productos.pdf"
+       class="inline-block bg-yellow-400  text-white font-bold px-6 py-2 rounded-2xl shadow-md  text-center cursor-pointer">
+      DESCARGAR CATÁLOGO
+    </a>
     </div>
   </div>
 
   <!-- Navigation -->
-  <nav id="menu" class="hidden md:block bg-white text-blue-600 py-2 md:py-0">
+  <nav id="menu" class="hidden md:block bg-white text-teal-500 py-2 md:py-0">
     <div class="flex flex-col md:flex-row justify-around items-center md:space-x-4 text-lg font-bold">
-      <a href="#" class="py-2 px-4 hover:bg-yellow-400 transition-colors duration-300">TIENDA</a>
-
+      <a href="/catalogo" class="py-2 px-4 hover:text-yellow-400 transition-colors duration-300">TIENDA</a>
+      <a href="/catalogo" class="py-2 px-4 hover:text-yellow-400 transition-colors duration-300">SERVICIOS</a>
+      <a href="/catalogo" class="py-2 px-4 hover:text-yellow-400 transition-colors duration-300">CATEGORÍAS</a>
       <!-- Dropdown for SERVICIOS -->
-      <div class="relative group">
+      <!-- <div class="relative group">
         <a href="#" class="flex items-center py-2 px-4 hover:bg-yellow-400 transition-colors duration-300">
           SERVICIOS
           <i class="fas fa-chevron-down ml-2"></i>
@@ -42,10 +49,10 @@
           <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Pizzería</a>
           <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Delivery</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- Dropdown for CATEGORÍAS -->
-      <div class="relative group">
+      <!-- <div class="relative group">
         <a href="#" class="flex items-center py-2 px-4 hover:bg-yellow-400 transition-colors duration-300">
           CATEGORÍAS
           <i class="fas fa-chevron-down ml-2"></i>
@@ -54,7 +61,8 @@
           <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Categoría 1</a>
           <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Categoría 2</a>
         </div>
-      </div>
+      </div> -->
+
     </div>
   </nav>
 </header>

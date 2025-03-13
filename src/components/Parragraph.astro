@@ -1,0 +1,14 @@
+---
+interface Props {
+  parragraph_text:string;
+  size_text:string;
+  mdsize_text:string;
+  color_text:string;
+}
+
+const {parragraph_text,size_text,mdsize_text,color_text} = Astro.props;
+---
+
+<p class=`text-${size_text} md:text-${mdsize_text} text-${color_text}`>
+  {parragraph_text}
+</p>

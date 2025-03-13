@@ -1,7 +1,37 @@
 ---
-
+import Linksseccion from "./Linksseccion.astro"
 ---
 
-<nav>
-  navbar
+<nav id="menu" class="hidden md:block bg-white text-teal-500 py-2 md:py-0">
+  <div class="flex flex-col md:flex-row justify-around items-center md:space-x-4 text-lg font-bold">
+    <Linksseccion href="/catalogo" text="TIENDA"></Linksseccion>
+    <Linksseccion href="/catalogo" text="SERVICIOS"></Linksseccion>
+    <Linksseccion href="/catalogo" text="CATEGORÍAS"></Linksseccion>
+
+    <!-- Dropdown for SERVICIOS -->
+    <!-- <div class="relative group">
+      <a href="#" class="flex items-center py-2 px-4 hover:bg-yellow-400 transition-colors duration-300">
+        SERVICIOS
+        <i class="fas fa-chevron-down ml-2"></i>
+      </a>
+      <div class="absolute hidden group-hover:block bg-white border border-gray-300 shadow-lg mt-2 rounded w-40 z-10">
+        <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Restaurante</a>
+        <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Pizzería</a>
+        <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Delivery</a>
+      </div>
+    </div> -->
+
+    <!-- Dropdown for CATEGORÍAS -->
+    <!-- <div class="relative group">
+      <a href="#" class="flex items-center py-2 px-4 hover:bg-yellow-400 transition-colors duration-300">
+        CATEGORÍAS
+        <i class="fas fa-chevron-down ml-2"></i>
+      </a>
+      <div class="absolute hidden group-hover:block bg-white border border-gray-300 shadow-lg mt-2 rounded w-40 z-10">
+        <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Categoría 1</a>
+        <a href="#" class="block px-4 py-2 hover:bg-yellow-400">Categoría 2</a>
+      </div>
+    </div> -->
+
+  </div>
 </nav>

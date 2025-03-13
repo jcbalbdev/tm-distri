@@ -1,96 +1,166 @@
----
----
-<div class="w-full max-w-5xl mx-auto py-8">
-  <button class="bg-teal-500 hover:bg-yellow-400 text-white font-bold
-              px-6 py-2 rounded-2xl shadow-md transition-all">
-    <a href="/catalogo">
-      CATÁLOGO EN LÍNEA
-    </a>
-  </button>
-  <!--min-w-[400px]  -->
-  <div class="relative group">
-    <div class="overflow-hidden">
-      <div 
-        class="flex w-full transition-transform duration-500 ease-in-out"
-        id="slider"
-      >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((num) => (
-          <div class="w-1/2 flex-shrink-0 p-2 group/item">
-            <div class="relative overflow-hidden rounded-xl shadow-lg aspect-auto    transition-transform duration-300 hover:scale-105">
-              <a href="/catalogo">
-              <img 
-                src={`/ctlgo_${num}.png`}
-                alt={`Imagen ${num}`}
-                class="object-cover w-full h-full"
-                loading="lazy"
-              />
-              </a>
+<div class=" flex items-center justify-center mt-6 mb-6 flex-col">
+
+    <!-- Botón CATÁLOGO EN LÍNEA -->
+    <button class="bg-teal-500 hover:bg-yellow-400 text-white font-bold px-6 py-2 rounded-2xl shadow-md transition-all mb-6">
+        <a href="/catalogo">
+            CATÁLOGO EN LÍNEA
+        </a>
+    </button>
+
+    <div id="default-carousel" class=" relative w-full max-w-4xl  rounded-lg overflow-hidden" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-auto md:h-96 flex">
+            <!-- Grupo 1 (Imagen 1 y 2) -->
+            <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+                <a href="/catalogo/#vasos_polipapel_para_bebidas_calientes" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="/vasos_polipapel_para_bebidas_calientes.png"
+                         class="w-full rounded-lg shadow-md"
+                         alt="VASOS POLIPAPEL PARA BEBIDAS CALIENTES">
+                </a>
+                <a href="/catalogo/#vasos_polipapel_para_bebidas_frias" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="/vasos_polipapel_para_bebidas_frias.png"
+                         class="w-full rounded-lg shadow-md"
+                         alt="VASOS POLIPAPEL PARA BEBIDAS FRIAS">
+                </a>
             </div>
+
+            <!-- Grupo 2 (Imagen 3 y 4) -->
+            <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+                <a href="/catalogo/#vasos_pp_y_ss_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="/vasos_pp_y_ss_descartables.png"
+                         class="w-full rounded-lg shadow-md"
+                         alt="Vasos PP y SS">
+                </a>
+                <a href="/catalogo/#cubiertos_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="/cubiertos_descartables.png"
+                         class="w-full rounded-lg shadow-md"
+                         alt="Cubiertos descartables">
+                </a>
+            </div>
+
+            <!-- Grupo 3 (Imagen 5 y 6) -->
+            <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+                <a href="/catalogo/#bandejas_y_salchipaperas_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="/bandejas_y_salchipaperas_descartables.png"
+                         class="w-full rounded-lg shadow-md"
+                         alt="Bandejas y salchipaperas">
+                </a>
+                <a href="/catalogo/#platos_planos_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="/platos_planos_descartables.png"
+                         class="w-full rounded-lg shadow-md"
+                         alt="Platos planos descartables">
+                </a>
+            </div>
+
+            <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+              <a href="/catalogo/#platos_hondos_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                  <img src="/platos_hondos_descartables.png"
+                       class="w-full rounded-lg shadow-md"
+                       alt="Bandejas y salchipaperas">
+              </a>
+              <a href="/catalogo/#envases_circulares_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                  <img src="/envases_circulares_descartables.png"
+                       class="w-full rounded-lg shadow-md"
+                       alt="Platos planos descartables">
+              </a>
           </div>
-        ))}
+
+          <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+            <a href="/catalogo/#envases_ajiceros_y_salseros_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <img src="/envases_ajiceros_y_salseros_descartables.png"
+                     class="w-full rounded-lg shadow-md"
+                     alt="Bandejas y salchipaperas">
+            </a>
+            <a href="/catalogo/#envases_rectangulares_hondos_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <img src="/envases_rectangulares_hondos_descartables.png"
+                     class="w-full rounded-lg shadow-md"
+                     alt="Platos planos descartables">
+            </a>
+        </div>
+
+        <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+          <a href="/catalogo/#contenedor_cajas_envases_bisagra_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <img src="/contenedor_cajas_envases_bisagra_descartables.png"
+                   class="w-full rounded-lg shadow-md"
+                   alt="Bandejas y salchipaperas">
+          </a>
+          <a href="/catalogo/#domos_y_bases_linea_papelera" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <img src="/domos_y_bases_linea_papelera.png"
+                   class="w-full rounded-lg shadow-md"
+                   alt="Platos planos descartables">
+          </a>
       </div>
+
+      <div class="hidden w-full grid grid-cols-2 gap-4 p-4" data-carousel-item>
+        <a href="/catalogo/#botellas_pet_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <img src="/contenedor_cajas_envases_bisagra_descartables.png"
+                 class="w-full rounded-lg shadow-md"
+                 alt="Bandejas y salchipaperas">
+        </a>
+        <a href="/catalogo/#bolsas_para_desechos_descartables" class="block transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <img src="/bolsas_para_desechos_descartables.png"
+                 class="w-full rounded-lg shadow-md"
+                 alt="Platos planos descartables">
+        </a>
     </div>
 
-    <!-- Botones laterales fijos -->
-    <div class="absolute inset-y-0 w-full flex items-center justify-between px-2 pointer-events-none">
-      <button
-        id="prev"
-        class="pointer-events-auto bg-pink-500/50 text-blue-900 p-0 rounded-full shadow-xl transition-transform transform -translate-x-4"
-        aria-label="Anterior"
-      >
-        <!-- Reemplazar con tu imagen de flecha -->
-        <img src="/flecha_izquierda.png" alt="Anterior" class="w-10 h-10" />
-      </button>
-      <button
-        id="next"
-        class="pointer-events-auto bg-pink-500/50 text-blue-900 p-0 rounded-full shadow-xl transition-transform transform translate-x-4"
-        aria-label="Siguiente"
-      >
-        <!-- Reemplazar con tu imagen de flecha -->
-        <img src="/flecha_derecha.png" alt="Siguiente" class="w-10 h-10" />
-      </button>
+        </div>
+
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30">
+                <img src="/flecha_izquierda.png" alt="flecha izquierda">
+            </span>
+        </button>
+
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30">
+              <img src="/flecha_derecha.png" alt="flecha derecha">
+            </span>
+        </button>
     </div>
-  </div>
 </div>
 
-<script is:inline>
-document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.getElementById('slider');
-  const slides = document.querySelectorAll('#slider > div');
-  let currentIndex = 0;
-  let autoPlayInterval;
+<script>
+    const carousel = document.getElementById('default-carousel');
+    const items = carousel.querySelectorAll('[data-carousel-item]');
+    let currentIndex = 0;
+    let interval;
 
-  const updateSlider = () => {
-    const translateValue = `translateX(-${currentIndex * 50}%)`;
-    slider.style.transform = translateValue;
-  };
+    function showSlide(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('hidden', i !== index);
+        });
+    }
 
-  const nextSlide = () => {
-    const maxIndex = Math.floor((slides.length - 1) / 2);
-    currentIndex = (currentIndex + 1) % (maxIndex + 1);
-    updateSlider();
-  };
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+    }
 
-  const prevSlide = () => {
-    const maxIndex = Math.floor((slides.length - 1) / 2);
-    currentIndex = (currentIndex - 1 + (maxIndex + 1)) % (maxIndex + 1);
-    updateSlider();
-  };
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showSlide(currentIndex);
+    }
 
-  // Autoplay cada 5 segundos
-  const startAutoPlay = () => {
-    autoPlayInterval = setInterval(nextSlide, 5000);
-  };
+    // Función para iniciar el desplazamiento automático
+    function startAutoSlide() {
+        interval = setInterval(nextSlide, 3000);
+    }
 
-  // Control de hover
-  slider.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-  slider.parentElement.addEventListener('mouseleave', startAutoPlay);
+    // Función para detener el desplazamiento automático
+    function stopAutoSlide() {
+        clearInterval(interval);
+    }
 
-  // Event listeners para botones
-  document.getElementById('next').addEventListener('click', nextSlide);
-  document.getElementById('prev').addEventListener('click', prevSlide);
+    // Iniciar el carrusel automáticamente
+    startAutoSlide();
 
-  // Iniciar autoplay
-  startAutoPlay();
-});
+    // Pausar el desplazamiento automático al pasar el mouse
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    // Botones de navegación manual
+    document.querySelector('[data-carousel-next]').addEventListener('click', nextSlide);
+    document.querySelector('[data-carousel-prev]').addEventListener('click', prevSlide);
 </script>

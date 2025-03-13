@@ -1,17 +1,15 @@
+---
+import Title from "./Title.astro";
+import Descargaarchivo from "./Descargaarchivo.astro";
+---
+
+
 <div class="container mx-auto p-4 md:p-6">
   <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
     <!-- Título -->
-    <h1 class="text-2xl md:text-3xl font-bold text-blue-500 order-0 md:order-none">
-      CATÁLOGO EN LÍNEA
-    </h1>
+    <Title title_text='CATÁLOGO EN LÍNEA' size_text='3xl' mdsize_text='4xl' color_text='blue-500'></Title>
     
-    <!-- Botón de Descarga -->
-    <a href="/catalogo.pdf" 
-       download="Catalogo-Productos.pdf"
-       class="inline-block bg-teal-500 hover:bg-yellow-400 text-white font-bold
-              px-6 py-2 rounded-2xl shadow-md transition-all whitespace-nowrap 
-              order-1 md:order-none text-center cursor-pointer">
-      DESCARGAR CATÁLOGO
-    </a>
+    <Descargaarchivo href="/catalogo.pdf" textdownload="Catalogo-Productos.pdf" text="DESCARGAR CATÁLOGO" bgcolor="teal-500" hover="hover:bg-yellow-400" transition="transition-all" stylesextra="whitespace-nowrap order-1 md:order-none"></Descargaarchivo>
+
   </div>
 </div>

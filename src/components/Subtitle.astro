@@ -1,0 +1,14 @@
+---
+interface Props {
+  subtitle_text:string;
+  size_text:string;
+  mdsize_text:string;
+  color_text:string;
+}
+
+const {subtitle_text,size_text,mdsize_text,color_text} = Astro.props;
+---
+
+<h2 class=`text-${size_text} md:text-${mdsize_text} text-${color_text}`>
+  {subtitle_text}
+</h2>

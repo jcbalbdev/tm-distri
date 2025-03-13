@@ -1,4 +1,15 @@
 ---
+interface Props {
+  src:string;
+  alt:string;
+  size:string;
+  mdsize:string;
+  rounded:string;
+  shadow:string;
+  aspect_ratio:string;
+}
+const {src,alt,size,mdsize,rounded,shadow,aspect_ratio} = Astro.props;
 ---
 
-<img src="" alt="imagen">
+
+  <img src={src} alt={alt} loading="lazy" class=`object-cover w-${size} md:w-${mdsize} h-auto rounded-${rounded} shadow-${shadow} aspect-${aspect_ratio}`>

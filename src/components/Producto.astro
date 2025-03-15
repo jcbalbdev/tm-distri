@@ -11,7 +11,7 @@ interface Props {
   title:string;
   subtitle:string;
   body:string;
-  text?:string;
+  text:string;
 }
 
 
@@ -54,7 +54,7 @@ const {src,alt,title,subtitle,body,text} = Astro.props;
       </div> -->
 
       <!-- Botón Comprar Ahora -->
-      <Whatsappbotton num_tlf='51979290418' text_tlf='{text}' text_botton='COMPRAR AHORA' bgcolor='teal-500' hover='hover:bg-yellow-400'  transition='transition-all'></Whatsappbotton>
+      <Whatsappbotton num_tlf='51979290418' text_tlf={text} text_botton='COMPRAR AHORA' bgcolor='teal-500' hover='hover:bg-yellow-400'  transition='transition-all'></Whatsappbotton>
 
     </div>
     

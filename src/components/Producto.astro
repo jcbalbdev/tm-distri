@@ -26,13 +26,13 @@ const {src,alt,title,subtitle,body,text} = Astro.props;
     </div>
 
     <div class="w-11/12 md:w-full space-y-6">
-      <Title title_text={title} size_text='3xl' mdsize_text='4xl' color_text='blue-500'></Title>
+      <Title title_text={title} size_text='text-3xl' mdsize_text='md:text-tex-4xl' color_text='text-blue-500'></Title>
 
       <div class="space-y-4">
-        <Subtitle subtitle_text={subtitle} size_text='lg' mdsize_text='xl' color_text='gray-800'></Subtitle>
+        <Subtitle subtitle_text={subtitle} size_text='text-lg' mdsize_text='md:text-xl' color_text='text-gray-800'></Subtitle>
 
         <div class="space-y-2">
-          <Parragraph parragraph_text={body} size_text='base' mdsize_text='lg' color_text='gray-500'></Parragraph>
+          <Parragraph parragraph_text={body} size_text='text-base' mdsize_text='md:text-lg' color_text='text-gray-500'></Parragraph>
         </div>
 
       </div>

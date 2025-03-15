@@ -9,6 +9,6 @@ interface Props {
 const {title_text,size_text,mdsize_text,color_text} = Astro.props;
 ---
 
-<h1 class=`text-${size_text} md:text-${mdsize_text} font-bold text-${color_text}`>
+<h1 class={`text-${size_text} md:text-${mdsize_text} font-bold text-${color_text}`}>
   {title_text}
 </h1>
